@@ -108,7 +108,7 @@ func (g *gobco) rel(arg string) string {
 	abs, err := filepath.Abs(arg)
 	g.ok(err)
 
-	gopathSrc := filepath.Join(gopath, "src")
+	gopathSrc := filepath.Join(gopath)
 	rel, err := filepath.Rel(gopathSrc, abs)
 	g.ok(err)
 
